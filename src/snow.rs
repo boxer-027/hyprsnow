@@ -43,19 +43,19 @@ impl Snowflake {
             speed: rng.gen_range(config.speed_min..config.speed_max),
             phase: rng.gen_range(0.0..std::f32::consts::TAU),
             drift_amount: rng.gen_range(0.0..config.drift),
-            opacity: rng.gen_range(0.7..1.0),
+            opacity: rng.gen_range(0.7..1.0) * config.max_opacity,
             state: SnowState::Falling,
         }
     }
 
-    fn reset_at_top(&mut self, width: f32, config: &SnowConfig, rng: &mut impl Rng) {
+    fn reset(&mut self, width: f32, height: f32, config: &SnowConfig, rng: &mut impl Rng) {
         self.x = rng.gen_range(0.0..width);
-        self.y = -self.radius;
+        self.y = rng.gen_range(-self.radius..height);
         self.radius = rng.gen_range(config.size_min..config.size_max);
         self.speed = rng.gen_range(config.speed_min..config.speed_max);
         self.phase = rng.gen_range(0.0..std::f32::consts::TAU);
         self.drift_amount = rng.gen_range(0.0..config.drift);
-        self.opacity = rng.gen_range(0.7..1.0);
+        self.opacity = rng.gen_range(0.7..1.0) * config.max_opacity;
         self.state = SnowState::Falling;
     }
 }
@@ -245,10 +245,10 @@ impl Application for Waysnow {
 
                             *melt_timer += dt;
                             let melt_progress = *melt_timer / melt_duration;
-                            flake.opacity = (1.0 - melt_progress).max(0.0) * 0.9;
+                            flake.opacity = (1.0 - melt_progress).max(0.0) * 0.9 * self.config.max_opacity;
 
                             if *melt_timer >= melt_duration {
-                                flake.reset_at_top(self.width, &self.config, &mut rng);
+                                flake.reset(self.width, self.height, &self.config, &mut rng);
                                 // Spawn in non-fullscreen area if possible
                                 if !valid_x_ranges.is_empty() {
                                     let range = &valid_x_ranges[rng.gen_range(0..valid_x_ranges.len())];

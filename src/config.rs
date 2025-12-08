@@ -9,6 +9,7 @@ pub struct SnowConfig {
     pub speed_min: f32,
     pub speed_max: f32,
     pub drift: f32,
+    pub max_opacity: f32,
 }
 
 impl Default for SnowConfig {
@@ -20,6 +21,7 @@ impl Default for SnowConfig {
             speed_min: 30.0,
             speed_max: 80.0,
             drift: 20.0,
+            max_opacity: 1.0,
         }
     }
 }
@@ -76,6 +78,10 @@ pub fn load_config() -> SnowConfig {
             .get_float("general:drift")
             .map(|v| v as f32)
             .unwrap_or(20.0),
+        max_opacity: config
+            .get_float("general:max_opacity")
+            .map(|v| (v as f32).clamp(0.0, 1.0))
+            .unwrap_or(1.0),
     }
 }
 
@@ -97,5 +103,8 @@ pub fn apply_cli_overrides(config: &mut SnowConfig, args: &Args) {
     }
     if let Some(v) = args.drift {
         config.drift = v;
+    }
+    if let Some(v) = args.max_opacity {
+        config.max_opacity = v.clamp(0.0, 1.0);
     }
 }

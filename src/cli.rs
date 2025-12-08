@@ -27,4 +27,8 @@ pub struct Args {
     /// Horizontal drift intensity (0 = none, 30 = strong)
     #[arg(long)]
     pub drift: Option<f32>,
+
+    /// Maximum snowflake opacity (0.0-1.0, default 1.0)
+    #[arg(long)]
+    pub max_opacity: Option<f32>,
 }

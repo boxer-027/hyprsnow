@@ -46,6 +46,7 @@ hyprsnow [OPTIONS]
 | `--speed-min <float>` | Minimum fall speed in pixels/second (default: 30.0) |
 | `--speed-max <float>` | Maximum fall speed in pixels/second (default: 80.0) |
 | `--drift <float>` | Horizontal drift intensity, 0 = none, 30 = strong (default: 20.0) |
+| `--max-opacity <float>` | Maximum snowflake opacity, 0.0 = invisible, 1.0 = solid (default: 1.0) |
 
 ## Configuration
 
@@ -59,6 +60,7 @@ general {
     speed_min = 30.0
     speed_max = 80.0
     drift = 20.0
+    max_opacity = 1.0
 }
 ```
 
