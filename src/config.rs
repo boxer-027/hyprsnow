@@ -14,7 +14,7 @@ pub struct SnowConfig {
     pub speed_max: f32,
     pub drift: f32,
     pub max_opacity: f32,
-    pub image_path: Option<String>,
+    pub image_paths: Option<Vec<String>>,
 }
 
 #[derive(Debug, Clone)]
@@ -32,7 +32,7 @@ impl Default for SnowConfig {
             speed_max: 80.0,
             drift: 20.0,
             max_opacity: 1.0,
-            image_path: None,
+            image_paths: None,
         }
     }
 }
@@ -60,6 +60,12 @@ pub fn load_config() -> SnowConfig {
     };
 
     let mut config = hyprlang::Config::new();
+
+    config.register_category_handler_fn("general", "image_path", |ctx| {
+        println!("Got image path: {}", ctx.value);
+        Ok(())
+    });
+
     if config.parse_file(&path).is_err() {
         return SnowConfig::default();
     }
@@ -93,10 +99,10 @@ pub fn load_config() -> SnowConfig {
             .get_float("general:max_opacity")
             .map(|v| (v as f32).clamp(0.0, 1.0))
             .unwrap_or(1.0),
-        image_path: config
-            .get_string("general:image_path")
-            .map(|s| s.to_string())
-            .ok(),
+        image_paths: config
+            .get_handler_calls("general:image_path")
+            .filter(|v| !v.is_empty())
+            .cloned()
     }
 }
 
@@ -121,6 +127,9 @@ pub fn apply_cli_overrides(config: &mut SnowConfig, args: &Args) {
     }
     if let Some(v) = args.max_opacity {
         config.max_opacity = v.clamp(0.0, 1.0);
+    }
+    if let Some(v) = &args.image_path {
+        config.image_paths = Some(v.clone());
     }
 }
 
